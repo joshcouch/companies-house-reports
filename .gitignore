@@ -1,1 +1,4 @@
 chrenv/
+sample_reports/
+
+*.pyc

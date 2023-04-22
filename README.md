@@ -18,3 +18,6 @@ To add new top-level packages to the virtualenv:
 1. Add them to requirements.in  
 1. `pip-compile` -> compile new requirements.txt from requirements.in
 1. `pip-sync` -> install packages
+
+### ocrmypdf
+Using [ocrmypdf](https://pypi.org/project/ocrmypdf/) python package to convert PDF files to PDF/A files (make them searchable). This uses OCR and interacts with PDFs, so it requires some additional installations, including ghostscript and tesseract. For more information see the [documentation](https://ocrmypdf.readthedocs.io/en/latest/installation.html#installing-on-windows)
