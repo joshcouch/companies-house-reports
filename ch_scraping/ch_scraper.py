@@ -79,7 +79,10 @@ class ChScraper():
         self.search_result_data = self.scrape_first_search_result()
         self.company_page_url = self.base_url + self.search_result_data["relative_url"]
         self.people_data = self.scrape_people()
-        return self.people_data
+        self.all_data = {
+            "search_result": self.search_result_data,
+            "people_data": self.people_data
+        }
 
 
 
@@ -96,5 +99,6 @@ if __name__ == "__main__":
               """)
     
     scraper = ChScraper()
-    print(scraper.get_company_data(search_term))
+    scraper.get_company_data(search_term)
+    print(scraper.all_data)
     
